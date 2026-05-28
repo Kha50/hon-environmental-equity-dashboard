@@ -1,1 +1,26 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
 
+#sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  padding: 20px;
+  background: white;
+  z-index: 10;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+}
+
+#viewDiv {
+  position: absolute;
+  left: 360px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
