@@ -12,11 +12,39 @@
 
 <body>
   <div id="sidebar">
-    <h1>HON Environmental Equity Dashboard</h1>
-    <p>
-      This dashboard explores environmental burden, zoning, and housing equity
-      across Seattle.
+    <div class="logo-box">
+      <div class="logo-circle">HON</div>
+      <div>
+        <h1>Environmental Equity Dashboard</h1>
+        <h2>House Our Neighbors</h2>
+      </div>
+    </div>
+
+    <p class="intro">
+      This dashboard explores how environmental burden, zoning, and housing equity overlap across Seattle.
+      It highlights patterns in multifamily housing, proposed zoning changes, and environmental health indicators.
     </p>
+
+    <div class="control-section">
+      <label for="layerSelect">Choose a map focus:</label>
+      <select id="layerSelect">
+        <option value="all">All Layers</option>
+        <option value="zoning">Zoning</option>
+        <option value="environment">Environmental Burden</option>
+        <option value="demographics">Demographics</option>
+      </select>
+    </div>
+
+    <div class="button-section">
+      <button id="btnZoning">Zoning</button>
+      <button id="btnEnvironment">Environmental Burden</button>
+      <button id="btnDemographics">Demographics</button>
+      <button id="btnReset">Reset View</button>
+    </div>
+
+    <div class="note">
+      Click areas on the map to view available data and use the layer list to toggle map layers.
+    </div>
   </div>
 
   <div id="viewDiv"></div>

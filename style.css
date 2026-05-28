@@ -3,23 +3,122 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
+  background: #f5f5f5;
 }
 
 #sidebar {
   position: absolute;
   left: 0;
   top: 0;
-  width: 320px;
+  width: 350px;
   height: 100%;
-  padding: 20px;
-  background: white;
+  padding: 24px;
+  background: #ffffff;
   z-index: 10;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  box-shadow: 4px 0 14px rgba(0, 0, 0, 0.18);
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.logo-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #243b53;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0;
+  color: #1f2933;
+}
+
+h2 {
+  font-size: 14px;
+  margin: 4px 0 0 0;
+  color: #52606d;
+  font-weight: normal;
+}
+
+.intro {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #334e68;
+  margin-bottom: 24px;
+}
+
+.control-section {
+  margin-bottom: 22px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1f2933;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bcccdc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.button-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+button {
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: #2f80ed;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1c64c7;
+}
+
+#btnReset {
+  background: #52606d;
+}
+
+#btnReset:hover {
+  background: #3e4c59;
+}
+
+.note {
+  padding: 12px;
+  background: #f0f4f8;
+  border-left: 4px solid #2f80ed;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #334e68;
 }
 
 #viewDiv {
   position: absolute;
-  left: 360px;
+  left: 350px;
   right: 0;
   top: 0;
   bottom: 0;

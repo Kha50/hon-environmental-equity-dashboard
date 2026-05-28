@@ -26,4 +26,24 @@ require([
 
   view.ui.add(layerList, "top-right");
   view.ui.add(legend, "bottom-right");
+
+  document.getElementById("btnReset").addEventListener("click", function() {
+    view.goTo({
+      center: [-122.3321, 47.6062],
+      zoom: 11
+    });
+  });
+
+  document.getElementById("btnZoning").addEventListener("click", function() {
+    alert("Zoning layer focus will be added here.");
+  });
+
+  document.getElementById("btnEnvironment").addEventListener("click", function() {
+    alert("Environmental burden layer focus will be added here.");
+  });
+
+  document.getElementById("btnDemographics").addEventListener("click", function() {
+    alert("Demographics layer focus will be added here.");
+  });
+
 });
