@@ -27,16 +27,10 @@ html, body {
   margin-bottom: 22px;
 }
 
-.logo-circle {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #243b53;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+.hon-logo {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
 }
 
 h1 {
