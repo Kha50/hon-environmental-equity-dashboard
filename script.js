@@ -73,10 +73,4 @@ document.getElementById("btnZoning").addEventListener("click", function() {
   mapSelect.value = zoningMap;
 });
 
-document.getElementById("btnFindings").addEventListener("click", function() {
-  document.getElementById("findingsSection").scrollIntoView({
-    behavior: "smooth"
-  });
-});
-
 });
