@@ -10,74 +10,94 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <div id="sidebar">
-    <div class="logo-box">
-      <img src="assets/HON-Vertical-Logo-RGB.webp" alt="HON Logo" class="hon-logo">
-      <div>
-        <h1>Environmental Equity Dashboard</h1>
-        <h2>House Our Neighbors</h2>
-      </div>
-    </div>
+<div id="sidebar">
 
-    <p class="intro">
-      This dashboard explores how environmental burden, zoning, and housing equity overlap across Seattle.
-      It highlights patterns in multifamily housing, proposed zoning changes, and environmental health indicators.
-    </p>
-
-    <div class="info-card" id="mapInfo">
-  <h3>Environmental Burden Map</h3>
-  <p>
-    This map shows environmental burden patterns across Seattle and helps identify
-    where housing and environmental health concerns may overlap.
-  </p>
-</div>
-
-<div class="info-card">
-  <h3>Key Questions</h3>
-  <ul>
-    <li>Are multifamily zones exposed to higher environmental burden?</li>
-    <li>Which neighborhoods appear most vulnerable?</li>
-    <li>How do proposed upzones overlap with pollution indicators?</li>
-  </ul>
-</div>
-
-<div class="info-card" id="findingsSection">
-  <h3>Project Findings</h3>
-  <p>
-    This dashboard helps compare environmental burden with current zoning and proposed upzoning areas.
-    The main focus is identifying whether housing growth areas overlap with higher pollution, noise,
-    or environmental health concerns.
-  </p>
-</div>
-
-    <div class="control-section">
-  <label for="mapSelect">Choose a map:</label>
-
-  <select id="mapSelect">
-    <option value="4ce2b6f5ae8d49ebac367ba6062f9526">
-      Environmental Burden Map
-    </option>
-
-    <option value="ed978f6bbf8c461da6fd7e87bf14d172">
-      Zoning Analysis Map
-    </option>
-  </select>
-</div>
-
-    <div class="button-section">
-      <button id="btnZoning">Zoning</button>
-      <button id="btnEnvironment">Environmental Burden</button>
-      <button id="btnReset">Reset View</button>
-    </div>
-
-    <div class="note">
-      Click areas on the map to view available data and use the layer list to toggle map layers.
+  <div class="logo-box">
+    <img src="assets/HON-Vertical-Logo-RGB.webp" alt="HON Logo" class="hon-logo">
+    <div>
+      <h1>Environmental Equity Dashboard</h1>
+      <h2>House Our Neighbors</h2>
     </div>
   </div>
 
-  <div id="viewDiv"></div>
+  <p class="intro">
+    This dashboard explores how environmental burden, zoning, and housing equity overlap across Seattle.
+    It highlights patterns in multifamily housing, proposed zoning changes, and environmental health indicators.
+  </p>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <div class="info-card">
+    <h3>How to Use This Dashboard</h3>
+    <p>
+      Use the Dashboard Views dropdown to switch between Environmental Burden Analysis
+      and Current vs Proposed Zoning. Use the layer list in the upper-right corner
+      to turn layers on and off and compare environmental conditions, zoning patterns,
+      health outcomes, and transit access across Seattle.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>Project Findings</h3>
+    <ul>
+      <li>Environmental burden varies significantly across Seattle neighborhoods.</li>
+      <li>Current multifamily housing is concentrated in specific environmental contexts.</li>
+      <li>Proposed upzoning areas can be compared against environmental burden indicators.</li>
+      <li>Health outcome layers provide additional context for environmental equity analysis.</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3>Data Sources</h3>
+    <ul>
+      <li>Seattle Zoning and Comprehensive Plan Data</li>
+      <li>Washington Environmental Health Disparities Data</li>
+      <li>American Community Survey (ACS)</li>
+      <li>Washington State Department of Health</li>
+      <li>Seattle Transit Accessibility Data</li>
+    </ul>
+  </div>
+
+  <div class="info-card" id="mapInfo">
+    <h3>Environmental Burden Analysis</h3>
+    <p>
+      This map displays environmental burden indicators, zoning patterns,
+      health outcomes, and transit accessibility across Seattle. Users can
+      explore how environmental conditions overlap with current and proposed
+      housing policies.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>Key Questions</h3>
+    <ul>
+      <li>Are multifamily zones exposed to higher environmental burden?</li>
+      <li>Which neighborhoods appear most vulnerable?</li>
+      <li>How do proposed upzones overlap with pollution indicators?</li>
+      <li>How do health outcomes vary across different environmental contexts?</li>
+    </ul>
+  </div>
+
+  <div class="control-section">
+    <label for="mapSelect">Dashboard Views:</label>
+
+    <select id="mapSelect">
+      <option value="4ce2b6f5ae8d49ebac367ba6062f9526">
+        Environmental Burden Analysis
+      </option>
+
+      <option value="ed978f6bbf8c461da6fd7e87bf14d172">
+        Current vs Proposed Zoning
+      </option>
+    </select>
+  </div>
+
+  <div class="button-section">
+    <button id="btnReset">Reset Map View</button>
+  </div>
+
+  <div class="note">
+    Click map features to view additional information. Use the Layer List in the
+    upper-right corner to toggle layers and compare zoning, environmental burden,
+    health outcomes, and transit accessibility across Seattle.
+  </div>
+
+</div>

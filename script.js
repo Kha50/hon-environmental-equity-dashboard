@@ -18,18 +18,17 @@ require([
 
   const mapSelect = document.getElementById("mapSelect");
 
-mapSelect.addEventListener("change", function() {
+  mapSelect.addEventListener("change", function() {
+    const selectedMap = this.value;
 
-  const selectedMap = this.value;
+    const newMap = new WebMap({
+      portalItem: {
+        id: selectedMap
+      }
+    });
 
-  const newMap = new WebMap({
-    portalItem: {
-      id: selectedMap
-    }
+    view.map = newMap;
   });
-
-  view.map = newMap;
-});
 
   const layerList = new LayerList({
     view: view
@@ -48,29 +47,5 @@ mapSelect.addEventListener("change", function() {
       zoom: 11
     });
   });
-
-document.getElementById("btnEnvironment").addEventListener("click", function() {
-  const environmentMap = "4ce2b6f5ae8d49ebac367ba6062f9526";
-
-  view.map = new WebMap({
-    portalItem: {
-      id: environmentMap
-    }
-  });
-
-  mapSelect.value = environmentMap;
-});
-
-document.getElementById("btnZoning").addEventListener("click", function() {
-  const zoningMap = "ed978f6bbf8c461da6fd7e87bf14d172";
-
-  view.map = new WebMap({
-    portalItem: {
-      id: zoningMap
-    }
-  });
-
-  mapSelect.value = zoningMap;
-});
 
 });
