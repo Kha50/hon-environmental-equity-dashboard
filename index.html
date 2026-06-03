@@ -25,15 +25,36 @@
       It highlights patterns in multifamily housing, proposed zoning changes, and environmental health indicators.
     </p>
 
+    <div class="info-card" id="mapInfo">
+  <h3>Environmental Burden Map</h3>
+  <p>
+    This map shows environmental burden patterns across Seattle and helps identify
+    where housing and environmental health concerns may overlap.
+  </p>
+</div>
+
+<div class="info-card">
+  <h3>Key Questions</h3>
+  <ul>
+    <li>Are multifamily zones exposed to higher environmental burden?</li>
+    <li>Which neighborhoods appear most vulnerable?</li>
+    <li>How do proposed upzones overlap with pollution indicators?</li>
+  </ul>
+</div>
+
     <div class="control-section">
-      <label for="layerSelect">Choose a map focus:</label>
-      <select id="layerSelect">
-        <option value="all">All Layers</option>
-        <option value="zoning">Zoning</option>
-        <option value="environment">Environmental Burden</option>
-        <option value="demographics">Demographics</option>
-      </select>
-    </div>
+  <label for="mapSelect">Choose a map:</label>
+
+  <select id="mapSelect">
+    <option value="4ce2b6f5ae8d49ebac367ba6062f9526">
+      Environmental Burden Map
+    </option>
+
+    <option value="e1634a8d574f4d129b838fad0b3f8302">
+      Zoning Analysis Map
+    </option>
+  </select>
+</div>
 
     <div class="button-section">
       <button id="btnZoning">Zoning</button>

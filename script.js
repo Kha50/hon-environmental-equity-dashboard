@@ -5,9 +5,9 @@ require([
   "esri/widgets/Legend"
 ], function(WebMap, MapView, LayerList, Legend) {
 
-  const webmap = new WebMap({
+  let webmap = new WebMap({
     portalItem: {
-      id: "306f6ce39c6a46f880cba103bec47daf"
+      id: "4ce2b6f5ae8d49ebac367ba6062f9526"
     }
   });
 
@@ -15,6 +15,21 @@ require([
     container: "viewDiv",
     map: webmap
   });
+
+  const mapSelect = document.getElementById("mapSelect");
+
+mapSelect.addEventListener("change", function() {
+
+  const selectedMap = this.value;
+
+  const newMap = new WebMap({
+    portalItem: {
+      id: selectedMap
+    }
+  });
+
+  view.map = newMap;
+});
 
   const layerList = new LayerList({
     view: view
@@ -34,16 +49,32 @@ require([
     });
   });
 
-  document.getElementById("btnZoning").addEventListener("click", function() {
-    alert("Zoning layer focus will be added here.");
+document.getElementById("btnEnvironment").addEventListener("click", function() {
+  const environmentMap = "4ce2b6f5ae8d49ebac367ba6062f9526";
+
+  view.map = new WebMap({
+    portalItem: {
+      id: environmentMap
+    }
   });
 
-  document.getElementById("btnEnvironment").addEventListener("click", function() {
-    alert("Environmental burden layer focus will be added here.");
+  mapSelect.value = environmentMap;
+});
+
+document.getElementById("btnZoning").addEventListener("click", function() {
+  const zoningMap = "e1634a8d574f4d129b838fad0b3f8302";
+
+  view.map = new WebMap({
+    portalItem: {
+      id: zoningMap
+    }
   });
 
-  document.getElementById("btnDemographics").addEventListener("click", function() {
-    alert("Demographics layer focus will be added here.");
-  });
+  mapSelect.value = zoningMap;
+});
+
+document.getElementById("btnDemographics").addEventListener("click", function() {
+  alert("Demographics map has not been added yet.");
+});
 
 });
