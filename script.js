@@ -7,7 +7,7 @@ require([
 
   let webmap = new WebMap({
     portalItem: {
-      id: "4ce2b6f5ae8d49ebac367ba6062f9526"
+      id: "ed978f6bbf8c461da6fd7e87bf14d172"
     }
   });
 
@@ -62,7 +62,7 @@ document.getElementById("btnEnvironment").addEventListener("click", function() {
 });
 
 document.getElementById("btnZoning").addEventListener("click", function() {
-  const zoningMap = "e1634a8d574f4d129b838fad0b3f8302";
+  const zoningMap = "ed978f6bbf8c461da6fd7e87bf14d172";
 
   view.map = new WebMap({
     portalItem: {
@@ -73,8 +73,10 @@ document.getElementById("btnZoning").addEventListener("click", function() {
   mapSelect.value = zoningMap;
 });
 
-document.getElementById("btnDemographics").addEventListener("click", function() {
-  alert("Demographics map has not been added yet.");
+document.getElementById("btnFindings").addEventListener("click", function() {
+  document.getElementById("findingsSection").scrollIntoView({
+    behavior: "smooth"
+  });
 });
 
 });
