@@ -5,7 +5,7 @@ require([
   "esri/widgets/Legend"
 ], function(WebMap, MapView, LayerList, Legend) {
 
-  let webmap = new WebMap({
+  const webmap = new WebMap({
     portalItem: {
       id: "ed978f6bbf8c461da6fd7e87bf14d172"
     }
@@ -14,20 +14,6 @@ require([
   const view = new MapView({
     container: "viewDiv",
     map: webmap
-  });
-
-  const mapSelect = document.getElementById("mapSelect");
-
-  mapSelect.addEventListener("change", function() {
-    const selectedMap = this.value;
-
-    const newMap = new WebMap({
-      portalItem: {
-        id: selectedMap
-      }
-    });
-
-    view.map = newMap;
   });
 
   const layerList = new LayerList({
